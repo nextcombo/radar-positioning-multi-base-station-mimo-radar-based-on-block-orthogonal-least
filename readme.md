@@ -1,0 +1,31 @@
+# [Radar Positioning] Multi-Base Station MIMO Radar Based on Block Orthogonal Least Squares for Multi-Target Positioning [with MATLAB Code]
+
+In recent years, there has been increasing interest in multi-site radar configurations aimed at improving the accuracy of multi-target positioning. Theoretically, the maximum likelihood (ML) method can integrate information provided by each radar to locate different targets. However, this method involves a multidimensional search process, whose complexity grows exponentially with the number of targets. Therefore, heuristic methods, especially Block Orthogonal Matching Pursuit (BOMP), are used in multi-site radar scenarios to approximate ML estimates greedily. Interestingly, more accurate Block Orthogonal Least Squares (BOLS) methods have not yet been studied in this scenario because their performance improvements are generally not proportional to their computational complexity. In this study, we explore the application of BOLS in angle-based multi-site multi-input multi-output (MIMO) radar multi-target positioning. Firstly, an efficient BOLS implementation is proposed to reduce its computational complexity. Then, through Monte Carlo simulations, we demonstrate that this efficient BOLS has significant advantages over BOMP in high correlated signal scenarios. We also investigate the impact of radar parameters on the root mean square error and computational complexity of both algorithms.
+
+In recent years, multi-site radars have received widespread attention in the literature due to their stronger perception capabilities compared to single- or dual-site radars [1]. A single-site/dual-site radar consists of one transmitter (STx) and one receiver (SRx), forming a radar pair (RP). Multi-site radars combine multiple radar pairs to observe the same area. Information from all radar pairs is utilized through two steps of fusion (aggregating local decisions about target positions) or one step of fusion (estimating target positions directly from the raw signals). As emphasized in [2] and [3], one-step fusion methods often provide more robust estimates but require higher computational time and data transmission.
+This study focuses on multi-baseline MIMO radar systems for multi-target positioning from a one-step perspective. More specifically, we focus on one-step fusion rules derived from ML criteria suitable for our perception scenarios. Under additive Gaussian white noise (AWGN) measurements, this method generates an NP-hard least squares optimization problem whose complexity grows exponentially with the number of targets. Low-complexity heuristic methods, such as MUSIC and ESPRIT, are commonly used for single radar target estimation scenarios [4] and [5], but they cannot be directly extended to one-step multi-baseline scenarios [6].
+Alternatively, greedy techniques for signal sparse decomposition, such as Orthogonal Matching Pursuit (OMP) [7] and [8] and Orthogonal Least Squares (OLS) [9] and [10], can serve as fast approximate solvers for the above ML problem [11] and [12]. Their formulas can be directly extended to one-step multi-baseline scenarios, such as the Block Orthogonal Matching Pursuit (BOMP) algorithm [13], which has been utilized in many multi-baseline radar applications [14]-[21]. Although OLS and its extensions, block OLS (BOLS) [22]-[24], can more accurately approximate both ML and maximum a posteriori (MAP) solutions [12] and [25], class OMP methods are preferred due to their simplicity and often provide superior performance / complexity tradeoffs. Therefore, to the best of the authors' knowledge, there is currently no research defining or applying BOLS methods to multi-baseline radars.
+The advantageous tradeoff of class OMP methods arises when signals from different targets are orthogonal to each other. As observed empirically in [26] and theoretically suggested in [27], in high correlation signal scenarios, the advantages of OLS become apparent. Unlike high-resolution time-delay - Doppler radar systems, the angle-based positioning scenario studied in this paper fits this case, which also motivates the implementation of the BOLS algorithm.
+Based on this, our contributions are as follows:
+A BOLS implementation method for multi-base station MIMO radar based on angle-based multi-target positioning is proposed.
+The efficient implementation of a class OLS method, rarely seen in the literature, is highlighted. By leveraging an efficient projection matrix decomposition, we achieve a complexity comparable to BOMP.
+Numerical simulations validate the superiority of BOLS over BOMP in terms of root mean square error (RMSE) as the signal-to-noise ratio (SNR) varies.
+Further comparison between BOLS and BOMP is conducted by examining the impact of target number and the number of antennas at each node (affecting resolution) on their respective performance.
+Figures in the article
+Conclusion In this paper, we investigate the capability of using blockwise greedy methods for multi-target angle-based positioning in multi-base station MIMO radar. We compare the performance of BOLS with that of the commonly used BOMP in terms of root mean square error and computational complexity. Monte Carlo simulations indicate that the proposed efficient BOLS implementation has superiority in high correlation scenarios considered in this study. The influence of the number of antennas at each node and the number of targets on this advantage is also discussed. Future work will further verify the advantages of BOLS with its computationally efficient implementation through multi-base station experiments.
+End
+
+## Images
+
+![(Radar Positioning)Multi-Base Station MIMO Radar Based Multi-Target Positioning in Block Orthogonal Least Squares [with MATLAB Code]](01.jpg)
+![(Radar Positioning)Multi-Base Station MIMO Radar Based Multi-Target Positioning in Block Orthogonal Least Squares [with MATLAB Code]](02.jpg)
+![(Radar Positioning)Multi-Base Station MIMO Radar Based Multi-Target Positioning in Block Orthogonal Least Squares [with MATLAB Code]](03.jpg)
+
+<!-- PAYMENT_BLOCK -->
+
+## Get this dataset
+
+- Payment link (Stripe): [Buy now](https://buy.stripe.com/3cs8yP7sY87d0vu9AB)
+- Payment QR code: ![Payment QR code](pay.png)
+
+<!-- /PAYMENT_BLOCK -->
